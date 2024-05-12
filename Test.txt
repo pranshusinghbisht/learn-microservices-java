@@ -1,2 +1,20 @@
-TEst
 
+UserService (Springboot with msyql)
+HotelService (Springboot with postgresql)
+RatingService (Springboot with mongodb)
+
+
+Test Bodies
+
+
+
+
+
+
+[Hotels]
+
+{
+  "name": "Rahul hotel",
+  "location": "Agra",
+  "about": "4 star hotel"
+}

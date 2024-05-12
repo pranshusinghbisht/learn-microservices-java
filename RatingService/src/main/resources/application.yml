@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://pranshubisht:dPDrG4NeFiWznMJt@authentication-system.jknkql6.mongodb.net/?retryWrites=true&w=majority&appName=Authentication-System
+      database: microservice
+
+server:
+  port: 8083
