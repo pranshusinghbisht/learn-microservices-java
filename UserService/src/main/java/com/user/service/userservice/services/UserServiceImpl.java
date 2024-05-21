@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService {
         // fetch rating of the above user from RATING SERVICE
 
         // http://localhost:8083/ratings/users/50a552cd-90f3-4d3a-8164-3872ae315d5e
-        Rating[] ratingsByUser = restTemplate.getForObject("http://localhost:8083/ratings/users/"+user.getUserId(), Rating[].class);
+        Rating[] ratingsByUser = restTemplate.getForObject("http://RATING-SERVICE/ratings/users/"+user.getUserId(), Rating[].class);
         // in prod localhost and port might change it should come with dynamic
 
         // Log the full ratings object using Gson
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
             // api call to hotel service to get the hotel service
 
 
-           ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://localhost:8082/hotels/"+rating.getHotelId(), Hotel.class);
+           ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTEL-SERVICE/hotels/"+rating.getHotelId(), Hotel.class);
 
             Hotel hotel = forEntity.getBody();
             logger.info("Hotel fetched for user: {}", hotel);
